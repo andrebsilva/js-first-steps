@@ -1,11 +1,11 @@
-// MUTABLE LET
+// MUTABLE CONST [PREVENT EXTENSIONS]
 
 const util = require('../10-Objects/b-utils.js')
 
-let coordinates = { // LET
+const coordinates = Object.preventExtensions({ // CONST PREVENT EXTENSIONS
   longitude: 100,
   latitude: 120
-}
+})
 
 
 util.print(coordinates)
@@ -14,9 +14,9 @@ util.print(coordinates)
 coordinates.longitude = 200
 coordinates.latitude = 240
 
-// Add property: direction
-console.log('\nAdding coordinates.direction')
-coordinates.direction = 'N'
+// Add property: direction [FAIL]
+console.log('\nAdding coordinates.direction [FAIL]')
+coordinates.direction = 'E'
 
 util.print(coordinates)
 

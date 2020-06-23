@@ -1,8 +1,8 @@
-// MUTABLE LET
+// MUTABLE CONST
 
 const util = require('../10-Objects/b-utils.js')
 
-let coordinates = { // LET
+const coordinates = { // CONST
   longitude: 100,
   latitude: 120
 }
@@ -16,7 +16,7 @@ coordinates.latitude = 240
 
 // Add property: direction
 console.log('\nAdding coordinates.direction')
-coordinates.direction = 'N'
+coordinates.direction = 'S'
 
 util.print(coordinates)
 
